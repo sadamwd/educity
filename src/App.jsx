@@ -10,6 +10,8 @@ import Testimonials from './Components/Testimonials/Testimonials';
 import ContactUs from './Components/Contact Us/ContactUs';
 import Footer from './Components/Footer/Footer';
 
+// adding new changes to the repository.
+
 const App = () => {
   return (
     <BrowserRouter> 
