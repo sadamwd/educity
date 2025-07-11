@@ -1,0 +1,133 @@
+/* Navbar container */
+nav {
+  width: 100%;
+  color: rgb(230, 241, 241);
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items:self-start;
+  justify-content:space-around;
+  z-index: 50;
+  transition: background-color 0.5s ease, box-shadow 0.3s ease;
+  background-color: transparent;
+  padding: 10px 10px;
+}
+
+/* Dark background on scroll or non-home pages */
+.dark-nav {
+  background-color: #212EA0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Logo style */
+.logo {
+  width: 180px;
+  cursor: pointer;
+}
+
+/* List styling */
+nav ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items:normal;
+  justify-content: center;
+  gap: 10px;
+}
+
+/* Each list item */
+nav ul li {
+  list-style: none;
+  margin: 5px 10px;
+  font-size: 16px;
+  
+}
+
+/* Links */
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #ffcc00;
+}
+
+/* Contact button */
+.btn {
+  background-color: #ff6600;
+  color: white;
+  border: none;
+  font-size: 14px;
+  border-radius: 20px;
+  cursor: pointer;
+  padding: 8px 20px;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #e65c00;
+}
+
+/* Button color when dark-nav is applied */
+.dark-nav .btn {
+  background-color: #ffa500;
+}
+
+.dark-nav .btn:hover {
+  background-color: #ff8c00;
+}
+
+/* Hide menu icon by default */
+.menu-icon {
+  display: none;
+}
+
+/* Media Queries */
+@media (max-width: 1000px) {
+  .logo {
+    width: 140px;
+  }
+
+  nav ul li {
+    margin: 10px 15px;
+  }
+}
+
+@media (max-width: 840px) {
+  nav {
+    padding: 10px 20px;
+  }
+
+  nav ul {
+    position: fixed;
+    top: 0;
+    right: -200px;
+    background: #212EA0;
+    z-index: 99;
+    width: 200px;
+    height: 100vh;
+    padding-top: 70px;
+    flex-direction: column;
+    align-items: flex-start;
+    transition: right 0.5s ease;
+  }
+
+  nav ul.open {
+    right: 0;
+  }
+
+  nav ul li {
+    display: block;
+    margin: 25px 30px;
+  }
+
+  .menu-icon {
+    display: block;
+    width: 30px;
+    cursor: pointer;
+    z-index: 100;
+  }
+}
